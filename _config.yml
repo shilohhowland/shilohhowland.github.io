@@ -1,2 +1,9 @@
 name: Shiloh M. James Howland
 markdown: kramdown
+gems:
+  - jekyll-sitemap
+  - jekyll-assets
+assets:
+  compress:
+    css: sass
+    js:  uglifier
