@@ -10,13 +10,36 @@ social:
     url: https://www.linkedin.com/profile/view?id=18673637
   - name: google-plus
     url: https://google.com/+ShilohHowland
-
-research_interests:
-  interest: Online teaching and learning
-  interest: Assessment
+    
+teaching_experience:
+  - employer: BYU-Idaho
+    position: online adjunct instructor for FDSCI 201
+    dates: Fall 2011&ndash;present
+  - employer: Columbia College (Salt Lake Campus)
+    position: adjunct instructor for Geol 110
+    dates: Late Fall 2013, Late Fall 2014, Late Fall 2015
+  - employer: Rasmussen College
+    position: online adjunct instructor for G124 Geology
+    dates: 2008&ndash;present
+    
+education:
+  - degree: Current Student
+    school: Brigham Young University
+    dates: Summer 2014&ndash;present
+    description: "Instructional Psychology and Technology (M.S. program)</p><p><strong>Research Interests:</strong></p><p>Online teaching and learning</p><p>Assessment"
+    icon: desktop
+  - degree: M.S., Geology
+    school: Brigham Young University
+    dates: December 2003
+    description: "Thesis title: Delineation of mass-movement prone areas using Landsat-7"
+    icon: book
+  - degree: B.S., Geology
+    school: Brigham Young University
+    dates: December 2000
+    icon: book
 
 publications:
-  - display: "Journal Analysis: International Journal of Computer-Supported Collaborative Learning, 2006-2014 - Coming Soon"
+  - display: "Journal Analysis: International Journal of Computer-Supported Collaborative Learning, 2006-2014 &mdash; Coming Soon"
   - display: "Geology M.S.Thesis (2003): Delineation of mass-movement prone areas using Landsat-7 and digital image processing"
     url: http://scholarsarchive.byu.edu/etd/1143/
 
@@ -24,13 +47,11 @@ publications:
 
 markdown: kramdown
 gems:
-  - jekyll-sitemap
   - jekyll-assets
   - font-awesome-sass
 assets:
   sources:
-    - _assets/fonts
-    - _assets/files
+    - _assets/stylesheets
   compress:
     css: sass
     js:  uglifier
