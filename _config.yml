@@ -1,9 +1,36 @@
 name: Shiloh M. James Howland
+phone: 801-609-8410
+email: shiloh.howland@gmail.com
+location: Orem, Utah
+
+description: "I am an instructor at BYU-Idaho and Rasmussen College. I am also a graduate student at Brigham Young University in the Instructional Psychology & Technology Program."
+
+social:
+  - name: linkedin
+    url: https://www.linkedin.com/profile/view?id=18673637
+  - name: google-plus
+    url: https://google.com/+ShilohHowland
+
+research_interests:
+  interest: Online teaching and learning
+  interest: Assessment
+
+publications:
+  - display: "Journal Analysis: International Journal of Computer-Supported Collaborative Learning, 2006-2014 - Coming Soon"
+  - display: "Geology M.S.Thesis (2003): Delineation of mass-movement prone areas using Landsat-7 and digital image processing"
+    url: http://scholarsarchive.byu.edu/etd/1143/
+
+
+
 markdown: kramdown
 gems:
   - jekyll-sitemap
   - jekyll-assets
+  - font-awesome-sass
 assets:
+  sources:
+    - _assets/fonts
+    - _assets/files
   compress:
     css: sass
     js:  uglifier

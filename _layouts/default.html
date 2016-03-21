@@ -6,19 +6,38 @@
   <meta name='robots' content='noindex,follow'/>
   <title>{{ page.title }}</title>
   {% stylesheet styles %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
   {% javascript javascript %}
 </head>
 
 <body>
 
-  <header>
-    <a href="http://shilohhowland.com/"><img src="{% asset_path shiloh.png %}" alt="Shiloh M. James Howland"/></a>
-    <nav>
-      <ul>
-        <li><a id="home" href="#home">Home</a></li>
-        <li><a id="teaching" href="#teaching">Teaching</a></li>
-        <li><a id="education" href="#education">Education</a></li>
-        <li><a id="publications" href="#publications">Publications</a></li>
+  {% include _nav.html %}
+  
+  <section data-scroll-index="0" id="home" name="home">
+    {% if site.name %}
+      <h1>{{ site.name }}</h1>
+    {% endif %}
+    {% if site.description %}
+      <p>{{ site.description }}</p>
+    {% endif %}
+    {% if site.social %}
+      <ul class="social">
+        {% for network in site.social %}
+          <li><a href="{{ network.url }}"><i class="fa fa-{{ network.name }}"></i></a></li>
+        {% endfor %}
       </ul>
-    </nav>
-  </header>
+    {% endif %}
+  </section>
+
+  {{ content }}
+
+  {% include _footer.html %}
+
+</body>
+</html>
+<script type="text/javascript">
+$(function(){
+  $.scrollIt();
+});
+</script>

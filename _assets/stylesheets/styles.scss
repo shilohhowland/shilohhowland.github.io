@@ -1,0 +1,139 @@
+@import "includes/meyer-reset";
+@import "includes/fonts";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+body {
+  font-family: Merriweather, "Minion Pro", "Hoefler Text", Georgia, serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+  line-height: 2rem;
+  color: #666666;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+header {
+  background: #000000;
+  color: #FFFFFF;
+  position: fixed;
+  width: 100%;
+  
+  img {
+    float: left;
+    margin: 10px 0 0 10px;
+  }
+  
+  nav {
+    vertical-align: middle;
+    font-style: italic;
+    list-style: none;
+    min-height: 5rem;
+    text-align: right;
+    margin-left: 65px;
+    
+    ul {
+      padding-top: 20px;
+      padding-right: 20px;}
+
+    li {
+      display: inline;
+      padding: 0 .5rem 0 0;
+    }
+
+    a {
+      color: #FFFFFF;
+      padding: 0 .25rem;
+      margin: 0 -.25rem;
+      text-decoration: none;
+      padding-bottom: 1rem;
+
+      &:hover {
+        color: #C00C00;
+        border-radius: 4px;
+      }
+    }
+
+    .active {
+      color: #C00C00;
+    }
+  }
+}
+
+
+section {
+  clear: both;
+}
+
+#home {
+  padding-top: 4rem;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  background: url({% asset_path bg.jpg %}) no-repeat top left scroll;
+  min-height: 40rem;
+  h1 {
+    border-bottom: 1px solid #FFFFFF;
+    display: inline;
+    line-height: 8rem;
+    margin: 2rem 0 2rem 0;
+  }
+  p {
+    margin: 0 auto;
+    width: 90%;
+    font-size: 1.3rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    max-width: 50rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1rem;
+    text-transform: none;
+  }
+  a {
+    color: #FFFFFF;
+    font-size: 2rem;
+  }
+}
+
+#teaching, #education, #publications {
+  padding-top: 5rem;
+  h1 {
+    font-size: 4rem;
+    font-family: Optima, "Gill Sans", Candara, Calibri, "Trebuchet MS", sans-serif;
+    padding-bottom: 3rem;
+  }
+}
+
+#teaching {
+   background: url({% asset_path bg2.jpg %}) repeat top left scroll;
+   padding-top: 5rem;
+}
+
+#education {
+  background: url({% asset_path bg3.jpg %}) repeat top left scroll;
+  color: #FFFFFF;
+  padding-top: 5rem;
+}
+
+#publications {
+  background: url({% asset_path bg2.jpg %}) repeat top left scroll;
+  padding-top: 5rem;
+}
+
+.social li {
+  list-style: none;
+  display: inline;
+  padding: 1rem;
+}
+
+.active {
+  color: red;
+}
