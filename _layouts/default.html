@@ -5,48 +5,39 @@
   <meta charset="UTF-8"/>
   <meta name='robots' content='noindex,follow'/>
   <title>{{ page.title }}</title>
-  <link rel='stylesheet' href='http://shilohhowland.com/wp-content/themes/onetone/css/font-awesome.min.css?ver=4.0.3' type='text/css' media=''/>
-  <link rel='stylesheet' href='http://shilohhowland.com/wp-content/themes/onetone/css/owl.carousel.css?ver=1.3.3' type='text/css' media=''/>
-  <link rel='stylesheet' href='http://shilohhowland.com/wp-content/themes/onetone/css/owl.theme.css?ver=1.3.3' type='text/css' media=''/>
-  <link rel='stylesheet' href='http://shilohhowland.com/wp-content/themes/onetone/style.css?ver=1.3.0' type='text/css' media='all'/>
-  <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%7CLustria%7CRaleway%7COpen+Sans%3A400%2C300&#038;ver=4.4.2' type='text/css' media=''/>
-  <style type='text/css'>
-    .site{
-      background:url(http://shilohhowland.com/wp-content/uploads/2014/10/bg.jpg) no-repeat top left fixed;
-    }
-    a,.site-logo a:hover,.site-navigation a:hover,.widget a:hover,.entry-title a:hover,.entry-meta a:hover,.loop-pagination a:hover,.page_navi a:hover,.site-footer a:hover,.home-navigation > ul > li.current > a > span,.home-navigation li a:hover,.home-navigation li.current a,.home-footer a:hover,#back-to-top,#back-to-top span{
-      color:#963;
-    }
-    #back-to-top{
-      border:1px solid #963;
-    }
-    mark,ins,.widget #wp-calendar #today{
-      background:#963;
-    }
-    ::selection,::-moz-selection{
-      background:#963 !important;
-    }
-    body{
-      margin:0px;
-    }
-  </style>
-  <script type='text/javascript' src='http://shilohhowland.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
-  <script type='text/javascript' src='http://shilohhowland.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
-  <script type='text/javascript' src='http://shilohhowland.com/wp-content/themes/onetone/js/modernizr.custom.js?ver=2.8.2%20'></script>
-  <script type='text/javascript' src='http://shilohhowland.com/wp-content/themes/onetone/js/respond.min.js?ver=1.4.2%20'></script>
-  <script type='text/javascript' src='http://shilohhowland.com/wp-content/themes/onetone/js/scrollTo.js?ver=1.4.2%20'></script>
+  {% stylesheet styles %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  {% javascript javascript %}
 </head>
 
 <body>
 
-  <header>
-    <a href="http://shilohhowland.com/"><img src="http://shilohhowland.com/wp-content/uploads/2014/10/shiloh.png" alt="Shiloh M. James Howland"/></a>
-    <nav>
-      <ul>
-        <li><a id="home" href="#home">Home</a></li>
-        <li><a id="teaching" href="#teaching">Teaching</a></li>
-        <li><a id="education" href="#education">Education</a></li>
-        <li><a id="publications" href="#publications">Publications</a></li>
+  {% include _nav.html %}
+  
+  <section data-scroll-index="0" id="home" name="home">
+    {% if site.name %}
+      <h1>{{ site.name }}</h1>
+    {% endif %}
+    {% if site.description %}
+      <p>{{ site.description }}</p>
+    {% endif %}
+    {% if site.social %}
+      <ul class="social">
+        {% for network in site.social %}
+          <li><a href="{{ network.url }}"><i class="fa fa-{{ network.name }}"></i></a></li>
+        {% endfor %}
       </ul>
-    </nav>
-  </header>
+    {% endif %}
+  </section>
+
+  {{ content }}
+
+  {% include _footer.html %}
+
+</body>
+</html>
+<script type="text/javascript">
+$(function(){
+  $.scrollIt();
+});
+</script>
