@@ -5,51 +5,49 @@ title: Shiloh M. James Howland
 
   <section data-scroll-index="1" id="teaching" name="teaching">
     <h1>Teaching Experience</h1>
-      <div class="two_third">
-        <p><a href="vita.pdf" title="Shiloh Howland vita">Complete Vita</a></p>
-        <p style="text-align: left;"><strong>BYU-Idaho</strong>, online adjunct instructor for FDSCI 201, Fall 2011-present</p>
-        <p style="text-align: left;"><strong>Columbia College (Salt Lake campus)</strong>, adjunct instructor for Geol 110, Late Fall 2013, Late Fall 2014</p>
-        <p style="text-align: left;"><strong>Rasmussen College</strong>, online adjunct instructor for G124 Geology, 2008-present</p>
-        <p><a href="philosophy.pdf" title="Teaching Philosophy" target="_blank">Teaching Philosophy</a></p>
+      <div class="col-2-3 grid-pad">
+        {% for job in site.teaching_experience %}
+          <p><strong>{{ job.employer }}</strong>, {{ job.position }}, {{ job.dates }}</p>
+        {% endfor %}
+        <p><a href="files/vita.pdf" title="Shiloh Howland Vita">Complete Vita</a></p>
+        <p><a href="files/philosophy.pdf" title="Shiloh Howland Teaching Philosophy">Teaching Philosophy</a></p>
       </div>
-      <div class="one_third last">
+      <div class="col-1-3 grid-pad">
         <h3>Personal Info</h3>
         <ul>
-          <li><i class="fa fa-phone"></i>{{ site.phone }}</li>
-          <li><i class="fa fa-map-marker"></i>{{ site.location }}</li>
-          <li><i class="fa fa-envelope"></i><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% if site.phone %}
+            <li><i class="fa fa-phone"></i>{{ site.phone }}</li>
+          {% endif %}
+          {% if site.location %}
+            <li><i class="fa fa-map-marker"></i>{{ site.location }}</li>
+          {% endif %}
+          {% if site.email %}
+            <li><i class="fa fa-envelope"></i><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          {% endif %}
         </ul>
       </div>
   </section>
 
   <section data-scroll-index="2" id="education" name="education">
     <h1>Education</h1>
-    <div class="one_third">
-      <i class="fa fa-3 fa-desktop"></i>
-      <h3>Current Student</h3>
-      <p>Summer 2014 - present</p>
-      <p>Instructional Psychology and Technology (M.S. program) at Brigham Young University</p>
-      <p><strong>Research interests include:</strong></p>
-      <ul>
-        <li>Online teaching and learning</li>
-        <li>Assessment</li>
-      </ul>
-    </div>
-    <div class="one_third">
-      <i class="fa fa-3 fa-book"></i>
-      <h3>M.S., Geology</h3>
-      <p>Brigham Young University, Dec. 2003</p>
-      <p>Thesis title: Delineation of mass-movement prone areas using Landsat-7</p>
-    </div>
-    <div class="one_third last">
-      <i class="fa fa-3 fa-book"></i>
-      <h3>B.S., Geology</h3>
-      <p>Brigham Young University, Dec. 2000</p>
-    </div>
+    {% for degree in site.education %}
+      <div class="col-1-3 grid-pad">
+        <i class="fa fa-3 fa-{{ degree.icon }}"></i>
+        <h3>{{ degree.degree }}</h3>
+        <p>{{ degree.school }}, {{ degree.dates }}</p>
+        <p>{{ degree.description }}</p>
+      </div>
+    {% endfor %}
+    
   </section>
 
   <section data-scroll-index="3" id="publications" name="publications">
     <h1>Publications</h1>
-    <p>Journal Analysis: International Journal of Computer-Supported Collaborative Learning, 2006-2014 - Coming Soon</p>
-    <p><a href="http://scholarsarchive.byu.edu/etd/1143/" title="Geology thesis, 2003">Geology M.S.Thesis (2003): Delineation of mass-movement prone areas using Landsat-7 and digital image processing</a></p>
+    {% for pub in site.publications %}
+      {% if pub.url %}
+        <p><a href="{{ pub.url }}">{{ pub.display }}</a></p>
+      {% else %}
+        <p>{{ pub.display }}</p>
+      {% endif %}
+    {% endfor %}
   </section>
