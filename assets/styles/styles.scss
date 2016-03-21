@@ -1,6 +1,7 @@
-@import "includes/meyer-reset";
-@import "includes/fonts";
-@import "font-awesome-sprockets";
+---
+---
+@import "meyer-reset";
+@import "fonts";
 @import "font-awesome";
 
 body {
@@ -87,7 +88,7 @@ section {
   text-align: center;
   color: #FFFFFF;
   text-transform: uppercase;
-  background: url("bg.jpg") no-repeat top left scroll;
+  background: url("../images/bg.jpg") no-repeat top left scroll;
   min-height: 40rem;
   h1 {
     border-bottom: 1px solid #FFFFFF;
@@ -125,7 +126,7 @@ section {
 }
 
 #teaching {
-   background: url("bg2.jpg") repeat top left scroll;
+   background: url("../images/bg2.jpg") repeat top left scroll;
    padding-top: 5rem;
    h3 {
     font-size: 2rem;
@@ -142,7 +143,7 @@ section {
 }
 
 #education {
-  background: url("bg3.jpg") repeat top left scroll;
+  background: url("../images/bg3.jpg") repeat top left scroll;
   color: #999999;
   padding-top: 5rem;
   text-align: center;
@@ -158,7 +159,7 @@ section {
 
 #publications {
   text-align: center;
-  background: url("bg2.jpg") repeat top left scroll;
+  background: url("../images/bg2.jpg") repeat top left scroll;
   padding-top: 5rem;
   padding: 5rem 2rem;
 }
