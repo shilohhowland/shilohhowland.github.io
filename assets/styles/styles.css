@@ -1,0 +1,413 @@
+/*! http://meyerweb.com/eric/tools/css/reset/ | v2.0 | 20110126 | License: none (public domain) */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol, ul {
+    list-style: none
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+/*! animate.css -http://daneden.me/animate | Version - 3.6.0 | Licensed under the MIT license - http://opensource.org/licenses/MIT | Copyright (c) 2018 Daniel Eden */
+footer, main, .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both
+}
+
+@-webkit-keyframes bounceInUp {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0)
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0)
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0)
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+@keyframes bounceInUp {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+    }
+
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 3000px, 0);
+        transform: translate3d(0, 3000px, 0)
+    }
+
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0)
+    }
+
+    75% {
+        -webkit-transform: translate3d(0, 10px, 0);
+        transform: translate3d(0, 10px, 0)
+    }
+
+    90% {
+        -webkit-transform: translate3d(0, -5px, 0);
+        transform: translate3d(0, -5px, 0)
+    }
+
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+}
+
+footer, main, .bounceInUp {
+    -webkit-animation-name: bounceInUp;
+    animation-name: bounceInUp
+}
+
+/*! Shiloh James Howland Consulting | MIT License */
+* {
+    box-sizing: border-box
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    background-color: #F1F1F2;
+    color: #444;
+    font-family: "Crimson Pro", "Minion Pro", "Hoefler Text", Georgia, serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility
+}
+
+a {
+    color: #095EB2;
+    text-decoration: none;
+    transition: color ease-in-out .3s
+}
+
+a:hover {
+    color: #E15943
+}
+
+p {
+    padding-bottom: 1em
+}
+
+em, i {
+    font-style: italic
+}
+
+strong, b {
+    font-weight: bold
+}
+
+img, iframe {
+    max-width: 100%;
+    height: auto
+}
+
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: super
+}
+
+blockquote p {
+    border-left: 4px solid #999;
+    margin: 1em auto;
+    max-width: 80%;
+    padding-left: 2em;
+    padding-bottom: 0
+}
+
+caption, figcaption {
+    background: #FFFFFF;
+    margin-bottom: 1em;
+    padding: 1em;
+    text-align: left
+}
+
+table {
+    margin: 2em 0
+}
+
+table tbody tr {
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc
+}
+
+table thead {
+    font-weight: bold
+}
+
+footer, header h1, main, nav {
+    margin: 0 auto;
+    max-width: 90%
+}
+
+header {
+    background-color: #E6E6E6;
+    border-top: 4px solid #E15943;
+    color: #E15943;
+    margin-bottom: 2rem;
+    padding: 1rem 0 0 0
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform: uppercase
+}
+
+header img {
+    max-height: 100px;
+}
+
+nav {
+    font-size: .9rem;
+    font-style: italic;
+    list-style: none
+}
+
+nav a {
+    border: 3px solid transparent;
+    border-bottom: 1px;
+    border-radius: .2em;
+    color: #444;
+    transition: color ease-in-out .3s
+}
+
+nav a:hover {
+    background-color: #F1F1F2;
+    border: 3px solid #F1F1F2;
+    border-bottom: 1px;
+    color: #E15943
+}
+
+nav li {
+    display: inline;
+    margin-right: .25rem
+}
+
+nav li:last-child {
+    margin-right: 0
+}
+
+nav .active {
+    border: 3px solid transparent
+}
+
+main h1 {
+    font-size: 1.8125rem
+}
+
+main h2 {
+    font-size: 1.625rem;
+    padding-top: 1em
+}
+
+main h3 {
+    font-size: 1.5rem;
+    line-height: 2;
+    padding-top: 1em
+}
+
+main ul {
+    list-style-type: disc
+}
+
+main ol {
+    list-style-type: decimal
+}
+
+main li {
+    margin-left: 1em
+}
+
+footer {
+    clear: both;
+    font-size: .8em;
+    line-height: 2;
+    list-style: none;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-align: center
+}
+
+footer a {
+    color: #999;
+    text-decoration: none
+}
+
+footer a:hover {
+    color: #E15943
+}
+
+footer [class^="icon-"]:before, footer [class *
+
+=
+" icon-"
+]
+:before {
+    margin-right: .25rem;
+    color: #444
+}
+
+footer [class^="icon-"]:before:hover, footer [class *
+
+=
+" icon-"
+]
+:before:hover {
+    color: #E15943
+}
+
+footer li {
+    display: inline;
+    padding-right: .5em
+}
+
+.avatar {
+    border-radius: 50%;
+    margin: 2.5rem 1rem 1rem 0;
+    max-width: 30%;
+    shape-margin: .5rem;
+    shape-outside: border-box
+}
+
+.caps {
+    text-transform: uppercase;
+    font-size: .9em;
+    font-style: normal
+}
+
+.clear {
+    clear: both
+}
+
+.hidden {
+    display: none
+}
+
+.muted {
+    color: #ccc
+}
+
+.pull-left {
+    float: left
+}
+
+.pull-right {
+    float: right
+}
+
+.small {
+    font-size: .8rem
+}
+
+@media screen and (min-width: 30rem) {
+    body {
+        font-size: 1.125rem;
+        line-height: 1.6875
+    }
+
+    header h1 {
+        font-size: 3rem
+    }
+
+    nav {
+        font-size: 1.125em
+    }
+
+    nav li {
+        margin-right: 1rem
+    }
+
+    nav li:last-child {
+        margin-right: 0
+    }
+}
+
+@media screen and (min-width: 48rem) {
+    body {
+        font-size: 1.25rem;
+        line-height: 1.75
+    }
+
+    header h1, nav {
+        margin: 0 4rem
+    }
+
+    nav {
+        margin-top: -.5em
+    }
+
+    main h1 {
+        font-size: 2.25rem
+    }
+
+    main h2 {
+        font-size: 2rem
+    }
+
+    main li {
+        font-feature-settings: 'kern' 1, 'onum' 1, 'liga' 1;
+        margin-left: 0
+    }
+
+    footer, main {
+        max-width: 40rem
+    }
+}
