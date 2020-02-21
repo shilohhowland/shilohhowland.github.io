@@ -198,7 +198,7 @@ footer, header h1, main, nav {
 }
 
 header {
-    background-color: #E6E6E6;
+    background-color: #EFE8E1;
     border-top: 4px solid #E15943;
     color: #E15943;
     margin-bottom: 2rem;
@@ -287,36 +287,12 @@ footer {
 }
 
 footer a {
-    color: #999;
+    color: #2A344F;
     text-decoration: none
 }
 
 footer a:hover {
     color: #E15943
-}
-
-footer [class^="icon-"]:before, footer [class *
-
-=
-" icon-"
-]
-:before {
-    margin-right: .25rem;
-    color: #444
-}
-
-footer [class^="icon-"]:before:hover, footer [class *
-
-=
-" icon-"
-]
-:before:hover {
-    color: #E15943
-}
-
-footer li {
-    display: inline;
-    padding-right: .5em
 }
 
 .avatar {
